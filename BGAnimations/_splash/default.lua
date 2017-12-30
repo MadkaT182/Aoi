@@ -1,0 +1,20 @@
+return Def.ActorFrame {
+	Def.Quad{
+		OnCommand=cmd(FullScreen;diffusecolor,Color.Black;sleep,1.5);
+	};
+	LoadActor("text0")..{
+		OnCommand=cmd(hibernate,0.1;x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y-20;diffusealpha,0;zoomx,0;decelerate,0.2;diffusealpha,1;zoomx,1);
+	};
+	LoadActor("../flash")..{
+		OnCommand=cmd(x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y-20;diffusealpha,0;decelerate,0.15;zoomy,.15;zoomx,2;diffusealpha,1;accelerate,0.1;zoomx,2.5;zoomy,0;diffusealpha,0.5);
+	};
+	LoadActor("../_white")..{
+		OnCommand=cmd(hibernate,0.1;x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y-8;diffusealpha,0;zoomx,0;decelerate,0.2;diffusealpha,1;zoomx,150);
+	};
+	LoadActor("text2")..{
+		OnCommand=cmd(hibernate,0.3;x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y-1;diffusealpha,0;zoomx,0;decelerate,0.2;diffusealpha,1;zoomx,1);
+	};
+	LoadActor("../flash")..{
+		OnCommand=cmd(hibernate,0.2;x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y-1;diffusealpha,0;zoom,.5;decelerate,0.15;zoomy,.7;zoomx,1;diffusealpha,1;accelerate,0.1;zoomx,1.25;zoomy,0;diffusealpha,0.5);
+	};
+}
